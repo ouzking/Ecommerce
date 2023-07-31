@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>La boutique de Ousmane</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="{% url 'home' %}">La Boutique</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Accueil</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Produit</a>
+                              </li>
+                              <li class="nav-item">
+                                  <button id="panier" type="button" class="btn btn-secondary" data-html="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Voici votre liste
+                                  ">
+                                    Panier(0)
+                                  </button>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Taille grande</a></li>
+                                  <li><a class="dropdown-item" href="#">Taille moyen</a></li>
+                                  <li><a class="dropdown-item" href="#">Taille petite</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+
+            {% block content %}{% endblock %}
+        </div>
+             
+                <!-- Footer -->
+                <footer class="text-center text-lg-start bg-primary text-dark">
+                  <!-- Section: Social media -->
+                  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                  <!-- Left -->
+                  <div class="me-5 d-none d-lg-block">
+                      <span>Contactez nous en cas besoin sur ceci :</span>
+                  </div>
+                  <!-- Left -->
+              
+                  <!-- Right -->
+                  <div>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"></i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-linkedin"></i>
+                      </a>
+                      <a href="" class="me-4 text-reset">
+                      <i class="fab fa-github"></i>
+                      </a>
+                  </div>
+                  <!-- Right -->
+                  </section>
+                  <!-- Section: Social media -->
+              
+                  <!-- Section: Links  -->
+                  <section class="">
+                  <div class="container text-center text-md-start mt-5">
+                      <!-- Grid row -->
+                      <div class="row mt-3">
+                      <!-- Grid column -->
+                          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                              <!-- Content -->
+                              <h6 class="text-uppercase fw-bold mb-4">
+                                  <i class="fas fa-gem me-3"></i>Mon Academie
+                              </h6>
+                              <p>
+                              Je suis un apprenant de XARALA ACADEMIE.
+                              Xarala est l'une des meilleures academies dans le monde du technologie. 
+                              </p>
+                          </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                              <!-- Links -->
+                              <h6 class="text-uppercase fw-bold mb-4">
+                              Les Marques
+                              </h6>
+                              <p>
+                                  <a href="#!" class="text-reset">Iphone</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">wireless</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">Accer</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">Samsung</a>
+                              </p>
+                          </div>
+                      <!-- Grid column -->
+              
+                          <!-- Grid column -->
+                          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                              <!-- Links -->
+                              <h6 class="text-uppercase fw-bold mb-4">
+                              Lien Utiles
+                              </h6>
+                              <p>
+                                  <a href="#!" class="text-reset">Xarala Academie</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">Paramètres</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">Autres</a>
+                              </p>
+                              <p>
+                                  <a href="#!" class="text-reset">Aide</a>
+                              </p>
+                          </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                              <!-- Links -->
+                              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                              <p><i class="fas fa-home me-3"></i> Dakar, Diamaguene Sicap Mbao, Dk</p>
+                              <p>
+                              <i class="fas fa-envelope me-3"></i>
+                              ousmanearfangkemobodian@gmail.com
+                              </p>
+                              <p><i class="fas fa-phone me-3"></i> + 221 77 437 85 58</p>
+                              <p><i class="fas fa-print me-3"></i> + 221 77 778 02 81</p>
+                          </div>
+                      <!-- Grid column -->
+                      </div>
+                      <!-- Grid row -->
+                  </div>
+                  </section>
+                  <!-- Section: Links  -->
+              
+                  <!-- Copyright -->
+                  
+                  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                  © 2023 Ousmane Bodian
+                  </div>
+                  <!-- Copyright -->
+              </footer>
+              <!-- Footer -->
+    </body>
+{% block js %}{% endblock %}
+</html>
